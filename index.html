@@ -1,1 +1,107 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maison Aegis — Cybersecurity Roadmap</title>
+<meta name="description" content="A royal path from absolute beginner to sovereign of cyber defense. Earn your rank."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <button class="brand" onclick="go('hero')">
+      <span class="brand-icon">🛡</span> MAISON AEGIS
+    </button>
+    <nav class="nav-links">
+      <button class="btn btn-ghost" onclick="go('path')">The Path</button>
+      <button class="btn btn-ghost" id="nav-assess" onclick="go('assess')">Earn Rank</button>
+      <button class="btn btn-ghost" onclick="go('join')">Join</button>
+    </nav>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">Classic · Royal · Living Roadmap</div>
+      <h1 style="font-size: clamp(2rem, 4.5vw, 3.2rem); margin-top: 1rem;">Maison Aegis</h1>
+      <p style="font-size: 1.35rem; color: var(--gold-soft); font-family: var(--font-display); letter-spacing: 0.06em;">
+        The cybersecurity path you earn
+      </p>
+      <p class="muted" style="max-width: 520px;">
+        From absolute beginner to sovereign of defense. Written so a curious child can understand the ideas —
+        with professional depth when you are ready. No rank is given away. Pass the trial. Unlock your path and videos.
+      </p>
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1.5rem;">
+        <button class="btn btn-solid" onclick="go('assess')">🛡 Earn Your Rank</button>
+        <button class="btn btn-ghost" onclick="go('join')">Weekly Updates</button>
+      </div>
+    </div>
+    <div class="crest-stage">
+      <div class="crest">
+        <div class="crest-ring r1"></div>
+        <div class="crest-ring r2"></div>
+        <div class="crest-shield"></div>
+      </div>
+      <div class="particles" id="particles"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line container" />
+
+<section class="container" style="padding: 0.5rem 0 2rem;">
+  <div class="panel">
+    <div class="badge">This Week’s Pulse</div>
+    <h3 style="margin-top:0.75rem;">What the realm is watching</h3>
+    <ul class="muted" id="weekly-list" style="margin:0.75rem 0 0; padding-left:1.2rem;"></ul>
+  </div>
+</section>
+
+<section id="assess" class="container" style="padding: 1rem 0 2.5rem;">
+  <div class="panel" id="assess-panel"></div>
+</section>
+
+<section id="path" class="container" style="padding: 0 0 3rem;">
+  <div style="text-align:center; margin-bottom:2rem;">
+    <div class="badge">The Five Ranks</div>
+    <h2 style="margin-top:0.75rem;">From First Shield to Sovereign</h2>
+    <p class="muted" id="path-intro" style="max-width:640px; margin:0.5rem auto 0;"></p>
+  </div>
+  <div id="ranks-list"></div>
+</section>
+
+<section id="join" class="container" style="padding: 0 0 4rem;">
+  <div class="join-grid">
+    <div>
+      <div class="badge">Dispatch</div>
+      <h2 style="margin-top:0.75rem;">Stay in the current</h2>
+      <p class="muted">
+        The roadmap is living. Each week we research new tools, threats, certs, and practices —
+        then tailor the path. Subscribe for email (and optional WhatsApp). Signup does not grant a rank.
+      </p>
+      <p class="small muted">Data is saved to our secure signup file for dispatches and improvement only.</p>
+    </div>
+    <div class="panel" id="signup-panel"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p style="font-family:var(--font-display); letter-spacing:0.14em; color:var(--gold);">MAISON AEGIS</p>
+    <p class="small muted">Earn the shield. Guard the realm. · Updated weekly</p>
+  </div>
+</footer>
+
+<div id="feedback-modal" class="modal-backdrop hidden"></div>
+
+<script src="data.js"></script>
+<script src="logic.js"></script>
+</body>
+</html>
